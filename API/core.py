@@ -56,7 +56,7 @@ def general_exception_handler(error: Exception) -> Tuple[Response, int]:
 class MyServer(Flask):
     def __init__(self, *args, **kwargs):
         '''
-        Extends flask server in order to provide custom database manager functionality.
+        Extends flask server in order to provide custom database manager.
         '''
         super(MyServer, self).__init__(*args, **kwargs)
 

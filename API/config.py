@@ -22,7 +22,7 @@ class Config:
         SECRET_KEY,
         os.urandom(24)
     )
-    LOG_FILE = "api.log"  # where logs are outputted to
+    LOG_FILE = 'api.log'
 
 
 class DevelopmentConfig(Config):
