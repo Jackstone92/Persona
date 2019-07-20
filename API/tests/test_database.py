@@ -82,8 +82,8 @@ def test_database_manager():
     # test fetch_one_user()
     test_username = 'mauriceharris'
     fetched_usernames = db_manager.fetch_one_user(username=test_username)
-    # assert len(db_manager.fetch_one_user(username=test_username)
-    #            ) == 1, 'Should find user in database by username'
+    assert len(db_manager.fetch_one_user(username=test_username)
+               ) > 0, 'Should find user in database by username'
 
 
 def test_teardown():
