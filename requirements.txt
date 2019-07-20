@@ -1,0 +1,12 @@
+Flask
+Flask-Cors
+Flask-Marshmallow
+Flask-Migrate
+Flask-Script
+Flask-Security
+Flask-SQLAlchemy
+Flask-SocketIO
+gunicorn
+marshmallow
+numpy
+pandas
