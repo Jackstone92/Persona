@@ -8,7 +8,9 @@ from API.config import config
 from API.constants import FLASK_ENV
 from API.core import MyServer, general_exception_handler, create_response
 from API.database.base import create_database
+
 from API.routes.persona import create_persona_endpoints
+from API.views.frontend import frontend
 
 
 def create_app(test_config=None):
@@ -57,6 +59,7 @@ def create_app(test_config=None):
     persona = create_persona_endpoints(app)
 
     app.register_blueprint(persona)
+    app.register_blueprint(frontend)
 
     # register error handler
     app.register_error_handler(Exception, general_exception_handler)
