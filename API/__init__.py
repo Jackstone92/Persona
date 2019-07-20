@@ -44,7 +44,7 @@ def create_app(test_config=None):
 
     if test_config:
         # used in order to inject configurations for testing purposes
-        app.config.from_mapping(**test_config)
+        app.config.from_object(test_config)
     else:
         app.config.from_object(config[env])
 
