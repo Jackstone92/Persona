@@ -1,15 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import GoogleMapReact from 'google-map-react';
-
-
+import UserContent from './UserContent';
 
 const User = props => {
-  const { image, username, name, current_location } = props;
+  const {
+    image,
+    username,
+    name,
+    job,
+    company,
+    current_location,
+    mail,
+    website,
+    birthdate
+  } = props;
 
   const lat = current_location[0];
-  const lon = current_location[1];
+  const long = current_location[1];
 
   return (
     <div className="card">
@@ -33,10 +41,18 @@ const User = props => {
       </svg>
 
       <div className="card__content">
-        <h1 className="card__title">{username}</h1>
-        <h2>{name}</h2>
+        <h1 className="card__title">{name}</h1>
+        <h2>
+          {username}
+          <span style={{ float: 'right' }}>{birthdate}</span>
+        </h2>
+
         <hr />
-        <p />
+        <p>
+          Works as a <b>{job}</b> at <em>{company}</em>.
+        </p>
+
+        <UserContent email={mail} lat={lat} long={long} websites={website} />
       </div>
     </div>
   );
@@ -46,7 +62,11 @@ User.propTypes = {
   image: PropTypes.string,
   username: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  current_location: PropTypes.array.isRequired
+  job: PropTypes.string.isRequired,
+  company: PropTypes.string.isRequired,
+  current_location: PropTypes.array.isRequired,
+  website: PropTypes.array.isRequired,
+  birthdate: PropTypes.string.isRequired
 };
 
 /*address: "09 Knight parkways↵West Yvonneshire↵HD23 5NJ"

@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const Navbar = withRouter(({ history, isActive, handleCloseNavigation }) => (
-  <div className="nav">
+  <div className={`nav`}>
     <div className="nav__content">
       <ul className="nav__list">
         <li

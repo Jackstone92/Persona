@@ -27,12 +27,15 @@ class App extends Component {
         <Hamburger
           handleHamburgerClicked={this.toggleNavigationState.bind(this)}
         />
-        <Navbar isActive={isActiveNavbar} handleCloseNavigation={this.toggleNavigationState.bind(this)} />
+        <Navbar
+          isActive={isActiveNavbar}
+          handleCloseNavigation={this.toggleNavigationState.bind(this)}
+        />
 
         <Switch>
           <Route exact path="/" component={FindPersonas} />
-          <Route path="/all-personas" component={AllPersonas} />
-
+          <Route exact path="/all-personas" component={AllPersonas} />
+          <Route path="/all-personas/:username" component={AllPersonas} />
         </Switch>
       </div>
     );

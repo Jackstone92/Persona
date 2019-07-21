@@ -12,10 +12,30 @@ const UsersGrid = props => {
       <div className="users">
         <div className="users__container">
           {users.map((user, i) => {
-            const { username, name, current_location } = user;
-            
+            const {
+              username,
+              name,
+              current_location,
+              job,
+              company,
+              mail,
+              website,
+              birthdate
+            } = user;
+
             return (
-              <User image={faker.random.image()} username={username} name={name} current_location={current_location} key={i} />
+              <User
+                image={faker.random.image()}
+                username={username}
+                name={name}
+                current_location={current_location}
+                job={job}
+                company={company}
+                mail={mail}
+                website={website}
+                birthdate={birthdate}
+                key={i}
+              />
             );
           })}
         </div>
