@@ -19,11 +19,12 @@ def client():
 
 
 def test_non_route(client):
-    req = client.get('/')
+    req = client.get('/ route-no-exist')
     res = req.get_json()
 
     error_message = '404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.'
-    assert res['message'] == error_message, 'Should gracefully prevent non-routes from being accessed'
+    assert res.get(
+        'message') == error_message, 'Should gracefully prevent non-routes from being accessed'
 
 
 def test_get_user(client):

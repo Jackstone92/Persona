@@ -75,7 +75,7 @@ def test_BASE_API_DATA_PATH():
 def test_PAGINATION_PER_PAGE():
     assert type(
         PAGINATION_PER_PAGE) == int, 'PAGINATION_PER_PAGE should be of type int'
-    assert PAGINATION_PER_PAGE == 10, 'PAGINATION_PER_PAGE should have correct value'
+    assert PAGINATION_PER_PAGE == 9, 'PAGINATION_PER_PAGE should have correct value'
 
 
 def test_JSON_FILE_COLUMN_HEADERS():
