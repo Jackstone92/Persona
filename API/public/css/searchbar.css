@@ -1,0 +1,55 @@
+.search__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 50px 20% 50px 20%;
+}
+
+.search__input {
+  width: 100%;
+  padding: 12px 24px;
+
+  background-color: transparent;
+  transition: transform 250ms ease-in-out;
+  font-family: 'Raleway';
+  font-weight: 300;
+  font-size: 1.6em;
+  line-height: 18px;
+
+  color: rgb(230, 230, 230);
+  background-color: transparent;
+  /* magnifying glass icon */
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Antu_dialog-icon-preview.svg/2560px-Antu_dialog-icon-preview.svg.png');
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  background-position: 95% center;
+  border-radius: 50px;
+  border: 1px solid rgb(230, 230, 230);
+  transition: all 250ms ease-in-out;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+@media screen and (max-width: 900px) {
+  .search__input {
+    font-size: 1em;
+  }
+}
+
+.search__input::placeholder {
+  color: rgba(87, 87, 86, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.search__input:hover,
+.search__input:focus {
+  padding: 12px 0;
+  outline: 0;
+  border: 1px solid transparent;
+  border-bottom: 1px solid white;
+  border-radius: 0;
+  background-position: 100% center;
+}

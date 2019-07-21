@@ -1,0 +1,26 @@
+.pagination__container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination {
+  margin-top: 25px;
+}
+.pagination span {
+  cursor: pointer;
+  color: rgb(230, 230, 230);
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border: 1px solid #ddd;
+}
+
+.pagination span.active {
+  background-color: rgb(80, 80, 80);
+  color: white;
+  border: 1px solid rgb(80, 80, 80);
+}
