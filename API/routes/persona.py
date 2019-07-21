@@ -19,8 +19,7 @@ def create_persona_endpoints(app):
         '''
         Searches through data for specific username.
         '''
-        # user = app.db_manager.fetch_one_user(username=username)
-        user = app.db_manager.fetch_one_user(username='mauriceharris')
+        user = app.db_manager.fetch_one_user(username=username)
 
         if not user:
             return create_response(
