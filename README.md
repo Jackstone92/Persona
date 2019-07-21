@@ -8,6 +8,31 @@
 
 3. Start the server using the following terminal command: `python3 manage.py runserver` to run in production environment or `python3 manage.py rundev` to run in development environment.
 
+## The following API routes are available:
+
+1. `GET /search/{username}` to get a user by their username.
+2. `GET /people` to get all users (paginated using the `?page=1` parameter).
+3. `DELETE /people/{username}` to delete a user by their username.
+
+## The following UI routes are available:
+
+1. `/` to search for user by username.
+2. `/all-personas` to return all users with pagination.
+
+## Screenshots:
+
+### **Screenshot 1:** UI for searching by username
+
+![Screenshot1](/screenshot1.png)
+
+### **Screenshot 2:** UI for returning all users
+
+![Screenshot2](/screenshot2.png)
+
+### **Screenshot 3:** UI for visualising users' details
+
+![Screenshot2](/screenshot3.png)
+
 ---
 
 # Persona API Original Instructions
